@@ -1,1 +1,30 @@
 #closing {font-family: "Sofia", sans-serif;}
+
+@font-face {
+  font-family: NotoSans;
+  src: url(NotoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: NotoSansIt;
+  src: url(NotoSans-Italic.ttf);
+}
+
+h1 {
+	text-align: center;
+	font-family: garamond, serif;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+	font-size: 5vw
+}
+
+h2, h3 {
+  font-family: NotoSansIt, sans-serif;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+}
+
+p {
+	font-family: NotoSans, sans-serif;
+	font-stretch: ultra-expanded;
+}
