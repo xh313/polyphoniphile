@@ -3,6 +3,8 @@
 
 h1 {
 	text-align: center;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
 	font-family: 'Noto Serif SC', serif;
 	font-weight: 100;
 	font-stretch: ultra-expanded;
@@ -29,4 +31,28 @@ video {
 	display: block;
 	margin: auto;
 	width: 80%;
+}
+
+body {
+  background-color: auto;
+}
+
+/* unvisited link */
+a:link {
+  color: #1e5567;
+}
+
+/* visited link */
+a:visited {
+  color: #494d43;
+}
+
+/* mouse over link */
+a:hover {
+  color: #8980ac;
+}
+
+/* selected link */
+a:active {
+  color: #bdb7d8;
 }
