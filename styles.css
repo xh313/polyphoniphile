@@ -12,7 +12,7 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 30%;
+	width: 50vw;
 	background-color: #f8f8f8;
 	text-align: center;
 	list-style-type: none;
@@ -52,14 +52,14 @@ p, ul, ol {
 video {
 	display: block;
 	margin: auto;
-	width: 75%;
+	width: 75vw;
 	padding-bottom: 3vw;
 }
 
 audio {
 	display: block;
 	margin: auto;
-	width: 80%;
+	width: 80vw;
 }
 
 iframe {
@@ -98,5 +98,5 @@ a:active {
 }
 
 abbr {
-	background-color: #f1f8d7
+	background-color: auto
 }
