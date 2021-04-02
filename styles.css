@@ -1,30 +1,32 @@
-#closing {font-family: "Sofia", sans-serif;}
+#closing {font-family: "Noto Serif SC", serif;}
 
-@font-face {
-  font-family: NotoSans;
-  src: url(NotoSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: NotoSansIt;
-  src: url(NotoSans-Italic.ttf);
-}
 
 h1 {
 	text-align: center;
-	font-family: garamond, serif;
+	font-family: 'Noto Serif SC', serif;
 	font-weight: 100;
 	font-stretch: ultra-expanded;
-	font-size: 5vw
+	font-size: 5vw;
 }
 
 h2, h3 {
-  font-family: NotoSansIt, sans-serif;
+	text-align: center;
+  font-family: 'Noto Sans SC', sans-serif;
 	font-weight: 100;
 	font-stretch: ultra-expanded;
 }
 
 p {
-	font-family: NotoSans, sans-serif;
-	font-stretch: ultra-expanded;
+	padding-left: 7vw;
+	padding-right: 7vw;
+	padding-top: 0vw;
+	padding-bottom: 0.5vw;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-stretch: normal;
+}
+
+video {
+	display: block;
+	margin: auto;
+	width: 80%;
 }
