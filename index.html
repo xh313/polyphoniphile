@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- To fit the width of different displays -->
 	<meta name="author" content="Helium">
 	<meta name="description" content="Original music content. Mostly polyphonies but occasionally others.">
-	<meta http-equiv="refresh" content="90">
+	<meta http-equiv="refresh" content="360">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;200;400&family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
@@ -16,29 +16,66 @@
 <body>
 
 <h1>- Polyphoniphile -</h1>
-<p>This is a page created by <abbr title='Helium/枣儿/Xuehuai/whatever'>me</abbr> for downloading all the audio files of my music.<br>After downloading them, you can save them into your phone and stream on your devices. (For instance, download it on your computer and copy it to your phone using a cable.)</p>
-<p>这个网页是用来放<abbr title='Helium/枣儿/Xuehuai/etc'>我</abbr>的曲子的下载链接的。下载后，你可以将它们导入你的设备的音乐播放器中播放。（比如在电脑上下载好后，连上数据线，导入到手机上。）</p>
+
+<p id='Intro'>By X. He</p>
+
+<p>This is a page created by <abbr title='Helium/枣儿/Xuehuai/whatever'>me</abbr> as a platform for downloading all the audio files of my music.<br>After downloading them, you can save them into your phone and stream on your devices. (For instance, download it on your computer and copy it to your phone using a cable.)</p>
+<p>这个网页是用来放<abbr title='氦/枣/hxh/etc'>我</abbr>的曲子的下载链接的。下载后，你可以将它们导入你的设备的音乐播放器中播放。（比如在电脑上下载好后，连上数据线，导入到手机上。）</p>
 <hr>
 
 <h2>Photophonic EP 声光乐影</h2>
 <p>Features 8 new songs: Kaleidoscope; Stargazer’s Waltz; Cloud Chamber; Aerial view; and 4 others…</p>
 <p>8首新曲。</p>
 
-<h3>Music Video</h3>
+<h3>Music Video 试听视频</h3>
 <p>Featuring a clip of each piece in this extended play.</p>
 <p>试听每首曲子的一小段。</p>
 <p style="font-size:80%;"><strong>*The video is muted by default. You would need to unmute it manually. 视频默认静音，请手动打开声音。</strong></p>
 
-<video muted controls poster="static/cover_images/photophonic.jpg">
+<video muted controls playsinline poster="static/cover_images/photophonic.jpg">
 	<source src="static/preview.mp4" type="video/mp4">
 </video>
 
+<h3>Download 下载</h3>
+<p>If you wish to download all in a zip file, please click <a href="photophonic\music\Photophonic_EP.zip">here</a>. 点击<a href="photophonic\music\Photophonic_EP.zip">此处</a>打包下载全部曲目。</p>
+<p>Alternatively, download single songs. 或者，单独下载曲目。</p>
+<ul id='singledownloads'>
+	<li><a href="photophonic\music\Kaleidoscope.mp3" download>Kaleidoscope 万花镜</a></li>
+	<li><a href="photophonic\music\Stargazers’ Waltz.mp3" download>Stargazer's Waltz 观星圆舞曲</a></li>
+	<li><a href="photophonic\music\Aerial view.mp3" download>Aerial View 瞰</a></li>
+	<li><a href="photophonic\music\Candlelight.mp3" download>Candlelight 烛影</a></li>
+	<li><a href="photophonic\music\Cloud Chamber.mp3" download>Cloud Chamber 云室</a></li>
+	<li><a href="photophonic\music\City Scene.mp3" download>City Scene 芸芸之像</a></li>
+	<li><a href="photophonic\music\Sparkling with Strings.mp3" download>Sparkling with Strings 燿（弦乐合奏）</a></li>
+	<li><a href="photophonic\music\Sparkling with Glockenspiel.mp3" download><abbr title='Bonus track!'>Sparkling with Glockenspiel 燿（钟琴）</abbr></a></li>
+</ul>
+
+<h3>Stream on this site 在线听</h3>
+<p>Kaleidoscope 万花镜</p>
+<audio controls><source src="photophonic\music\Kaleidoscope.mp3"  >Kaleidoscope 万花镜 </audio>
+<p>Stargazer's Waltz 观星圆舞曲</p>
+<audio controls><source src="photophonic\music\Stargazers’ Waltz.mp3"  >Stargazer's Waltz 观星圆舞曲 </audio>
+<p>Aerial View 瞰</p>
+<audio controls><source src="photophonic\music\Aerial view.mp3"  >Aerial View 瞰 </audio>
+<p>Candlelight 烛影</p>
+<audio controls><source src="photophonic\music\Candlelight.mp3"  >Candlelight 烛影 </audio>
+<p>Cloud Chamber 云室</p>
+<audio controls><source src="photophonic\music\Cloud Chamber.mp3"  >Cloud Chamber 云室 </audio>
+<p>City Scene 芸芸之像</p>
+<audio controls><source src="photophonic\music\City Scene.mp3"  >City Scene 芸芸之像 </audio>
+<p>Sparkling with Strings 燿（弦乐合奏）</p>
+<audio controls><source src="photophonic\music\Sparkling with Strings.mp3"  >Sparkling with Strings 燿（弦乐合奏） </audio>
+<p>Sparkling with Glockenspiel 燿（钟琴）</p>
+<audio controls><source src="photophonic\music\Sparkling with Glockenspiel.mp3"  >Sparkling with Glockenspiel 燿（钟琴）</audio>
+
+<h3>Listen on SoundCloud（需要科学）</h3>
+<iframe width="50%" height="130" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/898248304&color=0c1a29"></iframe><div style="font-size: 10px; color: #1e5567;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: 'Noto Sans SC';font-weight: 200;"></div>
+
 <hr>
 <footer>
-	<p>Please note that all downloads displayed on this site are licensed under&nbsp;<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer noopener">Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).</a></p>
-	<p>请注意本页面所有下载链接中的作品都以CC 4.0（非商用）授权使用和传播。具体规则请点击上面的链接。</p>
+	<p>Please note that all downloads displayed on this site are licensed under&nbsp;<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer noopener">Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).</a><br>请注意本页面所有下载链接中的作品都以CC 4.0（非商用）授权使用和传播。具体规则请点击上面的链接。</p>
 
-	<p>Subscribe to my <a href="https://space.bilibili.com/1067724831">Bilibili channel</a>, <a href="https://soundcloud.com/xuehuai-he">SoundCloud</a>, and <a href="https://mp.weixin.qq.com/s/5Yx6-n2dxLglOUmclt2HNw">WeChat</a>!</p>
+	<p>Subscribe to my <a href="https://space.bilibili.com/1067724831">Bilibili channel</a>, <a href="https://soundcloud.com/xuehuai-he">SoundCloud</a>, and <a href="https://mp.weixin.qq.com/s/5Yx6-n2dxLglOUmclt2HNw">WeChat</a>!<br>关注我的<a href="https://space.bilibili.com/1067724831">B站</a>和<a href="https://mp.weixin.qq.com/s/5Yx6-n2dxLglOUmclt2HNw">微信公众号</a>吧！</p>
 	<p id='closing' style="font-size:80%;">Polyphoniphile 2021.</p>
 </footer>
 

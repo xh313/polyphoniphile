@@ -1,36 +1,76 @@
-#closing {font-family: "Noto Serif SC", serif;}
+#closing {font-family: "Noto Serif SC", serif; padding-bottom: 3vw;}
 
+#Intro {
+	text-align: center;
+	font-family: "Noto Serif SC", serif;
+	font-weight: 100;
+	font-stretch: ultra-expanded;
+	padding-bottom: 3vw;
+}
+
+#singledownloads {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	background-color: #f8f8f8;
+	text-align: center;
+	list-style-type: none;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-stretch: ultra-expanded;
+	padding: 3vw;
+	margin-bottom: 3vw;
+}
 
 h1 {
 	text-align: center;
 	padding-top: 3vw;
-	padding-bottom: 3vw;
+	padding-bottom: 0vw;
 	font-family: 'Noto Serif SC', serif;
 	font-weight: 100;
 	font-stretch: ultra-expanded;
-	font-size: 5vw;
+	font-size: 5vmax;
 }
 
 h2, h3 {
 	text-align: center;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
   font-family: 'Noto Sans SC', sans-serif;
 	font-weight: 100;
 	font-stretch: ultra-expanded;
 }
 
-p {
+p, ul, ol {
 	padding-left: 7vw;
 	padding-right: 7vw;
 	padding-top: 0vw;
 	padding-bottom: 0.5vw;
 	font-family: 'Noto Sans SC', sans-serif;
-	font-stretch: normal;
 }
 
 video {
 	display: block;
 	margin: auto;
+	width: 75%;
+	padding-bottom: 3vw;
+}
+
+audio {
+	display: block;
+	margin: auto;
 	width: 80%;
+}
+
+iframe {
+	display: block;
+	margin: auto;
+}
+
+hr {
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+	width: 85%
 }
 
 body {
@@ -55,4 +95,8 @@ a:hover {
 /* selected link */
 a:active {
   color: #bdb7d8;
+}
+
+abbr {
+	background-color: #f1f8d7
 }
