@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polyphoniphile</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- To fit the width of different displays -->
+	<meta name="author" content="Helium">
+	<meta name="description" content="Original music content. Mostly polyphonies but occasionally others.">
+	<meta http-equiv="refresh" content="360">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;200;400&family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1>- Polyphoniphile -</h1>
+
+<p id='Intro'>By X. He</p>
+
+<!-- Below is the main body-->
+<h2>Thank you for thinking about giving me some support! 感谢你愿意支持我！</h2>
+<p>
+	You can buy me a coffee using one of the following methods:
+	<br>
+	你可以用以下方式让我恰个饭：
+</p>
+
+<div>
+	<p class='bookmarks'>
+		Jump to 跳转至：
+		<a href="index.html">Home page 主页</a>,
+		<a href="#paypal">Paypal</a>,
+		<a href="#wechat">WeChat Pay 微信支付</a>,
+		<a href="#alipay">Alipay 支付宝</a>
+		.
+	</p>
+</div>
+
+<h3 id='paypal'>Paypal <strong style="font-size:80%; font-weight:100">
+	*Temporarily unavailable
+</strong></h3>
+<p>
+	Paypal allows you to pay in any currencies around the world and is super easy to set up.
+	(I'm not sponsored!)
+	Any amount is hugely appreciated!
+	<br>
+	在Paypal上可以用任意货币支付，超级方便！（我没收广告费）
+	任意金额都会让我非常开心噢。
+</p>
+
+<div id="smart-button-container">
+    <div style="text-align: center"><label for="description">Anything you'd like to add: </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+      <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+    <div style="text-align: center"><label for="amount">Amount in USD: </label><input name="amountInput" type="number" id="amount" value="" ><span> USD</span></div>
+      <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+    <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+      <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+    <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+  </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+  function initPayPalButton() {
+    var description = document.querySelector('#smart-button-container #description');
+    var amount = document.querySelector('#smart-button-container #amount');
+    var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+    var priceError = document.querySelector('#smart-button-container #priceLabelError');
+    var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+    var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+    var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+    var elArr = [description, amount];
+
+    if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+      invoiceidDiv.style.display = "block";
+    }
+
+    var purchase_units = [];
+    purchase_units[0] = {};
+    purchase_units[0].amount = {};
+
+    function validate(event) {
+      return event.value.length > 0;
+    }
+
+    paypal.Buttons({
+      style: {
+        color: 'white',
+        shape: 'rect',
+        label: 'paypal',
+        layout: 'vertical',
+
+      },
+
+      onInit: function (data, actions) {
+        actions.disable();
+
+        if(invoiceidDiv.style.display === "block") {
+          elArr.push(invoiceid);
+        }
+
+        elArr.forEach(function (item) {
+          item.addEventListener('keyup', function (event) {
+            var result = elArr.every(validate);
+            if (result) {
+              actions.enable();
+            } else {
+              actions.disable();
+            }
+          });
+        });
+      },
+
+      onClick: function () {
+        if (description.value.length < 1) {
+          descriptionError.style.visibility = "visible";
+        } else {
+          descriptionError.style.visibility = "hidden";
+        }
+
+        if (amount.value.length < 1) {
+          priceError.style.visibility = "visible";
+        } else {
+          priceError.style.visibility = "hidden";
+        }
+
+        if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+          invoiceidError.style.visibility = "visible";
+        } else {
+          invoiceidError.style.visibility = "hidden";
+        }
+
+        purchase_units[0].description = description.value;
+        purchase_units[0].amount.value = amount.value;
+
+        if(invoiceid.value !== '') {
+          purchase_units[0].invoice_id = invoiceid.value;
+        }
+      },
+
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: purchase_units,
+        });
+      },
+
+      onApprove: function (data, actions) {
+        return actions.order.capture().then(function (details) {
+          alert('Transaction completed by ' + details.payer.name.given_name + '!');
+        });
+      },
+
+      onError: function (err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+  </script>
+
+<h3 id=wechat>WeChat Pay 微信支付</h3>
+<p>
+	Scan the pay code below using WeChat to donate!
+	<br>
+	微信扫描付款码就可以让我恰上饭啦！
+</p>
+<img src="https://user-images.githubusercontent.com/77285010/113485936-26204e00-94a8-11eb-88ca-0f2eae80e103.png" alt="Wechat Pay Code">
+
+<h3 id=alipay>Alipay 支付宝</h3>
+<p>
+	Scan the QR code below using Alipay to donate!
+	<br>
+	支付宝扫描付款码就可以让我恰上饭啦！
+</p>
+<img src="https://user-images.githubusercontent.com/77285010/113486075-d68e5200-94a8-11eb-8462-deb5ce191c28.png" alt="Alipay">
+<!-- Above is the main body-->
+
+<hr>
+<footer>
+	<p>Please note that all downloads displayed on this site are licensed under&nbsp;<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer noopener">Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).</a><br>请注意本页面所有下载链接中的作品都以CC 4.0（非商用）授权使用和传播。具体规则请点击上面的链接。</p>
+
+	<p>Subscribe to my <a href="https://space.bilibili.com/1067724831">Bilibili channel</a>, <a href="https://soundcloud.com/xuehuai-he">SoundCloud</a>, and <a href="https://mp.weixin.qq.com/s/5Yx6-n2dxLglOUmclt2HNw">WeChat</a>!<br>关注我的<a href="https://space.bilibili.com/1067724831">B站</a>和<a href="https://mp.weixin.qq.com/s/5Yx6-n2dxLglOUmclt2HNw">微信公众号</a>吧！</p>
+	<p id='closing' style="font-size:90%;">Polyphoniphile 2021. For website issues please report to my repository on <a href="https://github.com/xh313/polyphoniphile">GitHub.</a></p>
+</footer>
+
+</body>
+</html>

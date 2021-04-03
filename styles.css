@@ -22,6 +22,29 @@
 	margin-bottom: 3vw;
 }
 
+#smart-button-container {
+	padding-left: 7vw;
+	padding-right: 7vw;
+	padding-top: 3vw;
+	padding-bottom: 0.5vw;
+	font-family: 'Noto Sans SC', sans-serif;
+}
+
+.bookmarks {
+	font-family: 'Noto Serif SC', serif;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80vw;
+	background-color: #f8f8f8;
+	text-align: center;
+	list-style-type: none;
+	font-stretch: ultra-expanded;
+	font-weight: bolder;
+	padding: 2vw;
+	margin-bottom: 3vw;
+}
+
 h1 {
 	text-align: center;
 	padding-top: 3vw;
@@ -53,6 +76,14 @@ video {
 	display: block;
 	margin: auto;
 	width: 75vw;
+	padding-bottom: 3vw;
+}
+
+img {
+	display: block;
+	margin: auto;
+	width: auto;
+	max-height: 480px;
 	padding-bottom: 3vw;
 }
 
