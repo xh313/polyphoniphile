@@ -83,7 +83,8 @@ img {
 	display: block;
 	margin: auto;
 	width: auto;
-	max-height: 480px;
+	max-width: 90vw;
+	height: auto;
 	padding-bottom: 3vw;
 }
 
