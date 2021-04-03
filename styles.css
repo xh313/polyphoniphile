@@ -84,7 +84,7 @@ img {
 	margin: auto;
 	width: auto;
 	max-width: 90vw;
-	height: auto;
+	max-height: 80vh;
 	padding-bottom: 3vw;
 }
 
