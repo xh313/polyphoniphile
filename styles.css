@@ -1,6 +1,6 @@
 #closing {font-family: "Noto Serif SC", serif; padding-bottom: 3vw;}
 
-#Intro {
+.Intro {
 	text-align: center;
 	font-family: "Noto Serif SC", serif;
 	font-weight: 100;
@@ -43,6 +43,10 @@
 	font-weight: bolder;
 	padding: 2vw;
 	margin-bottom: 3vw;
+}
+
+.fullpage {
+	height: 85vh;
 }
 
 h1 {
